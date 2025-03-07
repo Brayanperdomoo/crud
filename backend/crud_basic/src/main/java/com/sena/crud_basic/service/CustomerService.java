@@ -4,7 +4,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.sena.crud_basic.repository.ICustomerRepository;
-import com.sena.crud_basic.model.customerDTO;
+import com.sena.crud_basic.model.employeeDTO;
 
 /*
  * Agregamos la anotación bean @Service
@@ -31,15 +31,15 @@ public class CustomerService{
 
 
 
-    public List<customerDTO> getAllCustomer(){
+    public List<employeeDTO> getAllCustomer(){
         return ICustomerRepository.findAll();
     }
 
-    public customerDTO getCustomerById(int id){
+    public employeeDTO getCustomerById(int id){
         return ICustomerRepository.findById(id).get();
     }
 
-    public boolean save(customerDTO customer){
+    public boolean save(employeeDTO customer){
         /*
          * if(customer.getId==0)register or create
          * else update
